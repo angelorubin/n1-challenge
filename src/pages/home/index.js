@@ -1,12 +1,19 @@
+/**
+ * Components
+ */
 import { HomeContainer } from "../../app.styles";
 import * as S from "./styles";
+import SliderControl from "pages/home/slider-control";
+
+/**
+ * Icons and Images
+ */
 import hamburguer from "images/icons/hamburguer.png";
 import logo from "images/logo.png";
 import plane from "images/icons/paper-plane.png";
 import search from "images/icons/search-solid.png";
 import bag from "images/icons/shopping-bag-solid.png";
-import SliderControl from "pages/home/slider-control";
-
+import line from "images/line.png"
 import sekiro from "images/sekiro-banner.png";
 import zelda from "images/zelda-banner.png";
 
@@ -58,7 +65,8 @@ function Home() {
           <S.Card>
             <img src={sekiro} alt="sekiro-image" />
             <S.CardFooter>
-              The Legend of Zelda - Breath of th wild <hr />
+              <S.CardFooterText>The Legend of Zelda - Breath of the wild</S.CardFooterText>
+              <S.CardFooterLine src={line} alt="line"/>
             </S.CardFooter>
           </S.Card>
           <S.Card>

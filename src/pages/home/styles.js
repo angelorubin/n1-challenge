@@ -141,12 +141,29 @@ export const Card = styled.div`
 
 export const CardFooter = styled.div`
   display: flex;
-  height: 50px;
+  align-items: center;
+  height: 30px;
   background-color: #3ec6e0;
   border-left: 5px solid #084154;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 `;
+
+export const CardFooterText = styled.h1`
+  width: 244.11px;
+  height: 10px;
+  left: 37.51px;
+  top: 710px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: #084154;
+`
+
+export const CardFooterLine = styled.img`
+  height: 1px;
+`
 
 /**
  * Featured Products
