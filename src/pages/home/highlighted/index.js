@@ -1,26 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import * as S from "./styles";
 /**
- * Slick
+ * react-responsive-carousel
  */
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import React from "react";
+import Slider from "react-slick";
+
 /**
  * Images and Icons
  */
 import product from "images/product-outriders.png";
 import highlightedIcon from "images/icons/highlighted-icon.png";
+import nextArrow from "images/icons/angle-right-solid.png";
+import prevArrow from "images/icons/angle-left-solid.png";
 
 const Highlighted = () => {
-  const [images, setImages] = useState([product]);
+  const [images, setImages] = useState([]);
+
+  useEffect(() => {
+    return setImages([
+      "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg",
+      "https://hatrabbits.com/wp-content/uploads/2017/01/random.jpg",
+    ]);
+  }, []);
 
   const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    nextArrow: <S.NextArrow src={nextArrow} />,
+    prevArrow: <S.PrevArrow src={prevArrow} />,
+    responsive: [],
   };
 
   return (
@@ -31,12 +40,12 @@ const Highlighted = () => {
       </S.TitleContainer>
       <S.SliderContainer>
         <Slider {...settings}>
-          <S.CardContainer>
-            <S.Card>
-              <S.CardImage src={images} alt="image" />
-              <S.CardFooter>Footer</S.CardFooter>
-            </S.Card>
-          </S.CardContainer>
+          <div>
+            <img src={product} />
+          </div>
+          <div>
+            <img src={product} />
+          </div>
         </Slider>
       </S.SliderContainer>
     </S.Container>
