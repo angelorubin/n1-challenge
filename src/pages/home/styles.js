@@ -1,8 +1,13 @@
 import styled from "styled-components";
 import bg from "images/banner-mobile.png";
 
+export const Container = styled.div`
+  display: flex;
+  width: ${(props) => props.width || ""};
+`;
+
 /**
- * MENU
+ * Menu
  */
 export const MenuContainer = styled.div`
   display: flex;
@@ -40,7 +45,7 @@ export const Icon = styled.img`
 `;
 
 /**
- * OVERLAY
+ * Overlay
  */
 
 export const Overlay = styled.div`
@@ -93,10 +98,10 @@ export const OverlayDescription = styled.p`
 `;
 
 /**
- * FOOTER
+ * Menu Footer
  */
 
-export const FooterContainer = styled.div`
+export const MenuFooterContainer = styled.div`
   display: flex;
 `;
 
@@ -118,7 +123,7 @@ export const FooterTitle = styled.h1`
 `;
 
 /**
- * CONTENT
+ * Content
  */
 
 export const ContentContainer = styled.div`
@@ -159,17 +164,50 @@ export const CardFooterText = styled.h1`
   font-size: 12px;
   line-height: 14px;
   color: #084154;
-`
+`;
 
 export const CardFooterLine = styled.img`
   height: 1px;
-`
+`;
 
 /**
- * Featured Products
+ * Footer
  */
 
-export const FeaturedProductsContainer = styled.div``;
-export const FeaturedIcon = styled.img``;
-export const FeaturedTitle = styled.h1``;
-export const FeaturedProducts = styled.div``;
+export const Footer = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 130px;
+`;
+
+export const FooterContainer = styled.div`
+  display: flex;
+  width: 100%;
+  height: 68px;
+`;
+
+export const FooterLogoContainer = styled.div`
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  background: #084154;
+`;
+
+export const FooterLogo = styled.img``;
+
+export const FooterTextContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 3;
+  background: #3ec6e0;
+`;
+
+export const FooterText = styled.h1`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  color: #ffffff;
+`;

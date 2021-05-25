@@ -4,16 +4,22 @@
 import { HomeContainer } from "../../app.styles";
 import * as S from "./styles";
 import SliderControl from "pages/home/slider-control";
+import Highlighted from "pages/home/highlighted";
 
 /**
- * Icons and Images
+ * Icons
  */
 import hamburguer from "images/icons/hamburguer.png";
-import logo from "images/logo.png";
 import plane from "images/icons/paper-plane.png";
 import search from "images/icons/search-solid.png";
 import bag from "images/icons/shopping-bag-solid.png";
-import line from "images/line.png"
+
+/**
+ * Images
+ */
+import logo from "images/logo.png";
+import footerLogo from "images/footer-logo.png";
+import line from "images/line.png";
 import sekiro from "images/sekiro-banner.png";
 import zelda from "images/zelda-banner.png";
 
@@ -54,30 +60,45 @@ function Home() {
           </S.OverlayContainer>
         </S.Overlay>
       </S.MenuContainer>
-      <S.FooterContainer>
+      <S.MenuFooterContainer>
         <S.FooterTitleContainer>
           <S.FooterTitle>MORTAL KOMBAT</S.FooterTitle>
         </S.FooterTitleContainer>
         <SliderControl />
-      </S.FooterContainer>
+      </S.MenuFooterContainer>
       <S.ContentContainer>
         <S.Content>
           <S.Card>
             <img src={sekiro} alt="sekiro-image" />
             <S.CardFooter>
-              <S.CardFooterText>The Legend of Zelda - Breath of the wild</S.CardFooterText>
-              <S.CardFooterLine src={line} alt="line"/>
+              <S.CardFooterText>
+                The Legend of Zelda - Breath of the wild
+              </S.CardFooterText>
+              <S.CardFooterLine src={line} alt="line" />
             </S.CardFooter>
           </S.Card>
           <S.Card>
             <img src={zelda} alt="zelda-image" />
+            <S.CardFooter>
+              <S.CardFooterText>SEKIRO - Shadows die twice</S.CardFooterText>
+              <S.CardFooterLine src={line} alt="line" />
+            </S.CardFooter>
           </S.Card>
         </S.Content>
       </S.ContentContainer>
-      <S.FeaturedProducts>
-        <S.FeaturedIcon />
-        <S.FeaturedTitle>title</S.FeaturedTitle>
-      </S.FeaturedProducts>
+      <Highlighted />
+      <S.Footer>
+        <S.FooterContainer>
+          <S.FooterLogoContainer>
+            <S.FooterLogo src={footerLogo} alt="logo" />
+          </S.FooterLogoContainer>
+          <S.FooterTextContainer>
+            <S.FooterText>
+              Agência N1 - Todos os direitos reservados
+            </S.FooterText>
+          </S.FooterTextContainer>
+        </S.FooterContainer>
+      </S.Footer>
     </HomeContainer>
   );
 }
