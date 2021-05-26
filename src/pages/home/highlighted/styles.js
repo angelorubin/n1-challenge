@@ -1,9 +1,10 @@
 import styled from "styled-components";
+import Slider from "react-slick";
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: column;
   align-items: center;
+  flex-direction: column;
 `;
 
 export const TitleContainer = styled.div`
@@ -31,33 +32,28 @@ export const Title = styled.h1`
  */
 
 export const SliderContainer = styled.div`
-  width: 100%;
-  min-height: 10vh;
-  border: 1px dashed red;
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  & > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
 `;
 
 export const CardContainer = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: 30px;
+  border: 2px dashed red;
 `;
 
 export const Card = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 250px;
-  background: #ffffff;
+  padding: 10px;
   box-shadow: 0px 4px 20px 7px rgba(0, 0, 0, 0.07);
   border-radius: 10px;
 `;
 
-export const CardImage = styled.img`
-  height: 100px;
-  width: 100px;
-`;
+export const CardImage = styled.img``;
 
 export const CardFooterContainer = styled.div`
   display: flex;
@@ -65,7 +61,13 @@ export const CardFooterContainer = styled.div`
   width: 100%;
 `;
 
-export const CardTitle = styled.h1``;
+export const CardTitle = styled.h1`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #084154;
+`;
 export const CardPrice = styled.h3``;
 export const CardDescription = styled.h4``;
 
