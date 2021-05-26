@@ -39,34 +39,37 @@ const Highlighted = () => {
   }, []);
 
   const Next = (props) => {
-    const { onClick } = props;
-    return <S.NextArrow src={nextArrow} onClick={onClick} />;
+    const { style, className, onClick } = props;
+    return (
+      <S.NextArrow
+        className={className}
+        style={{ ...style }}
+        src={nextArrow}
+        onClick={onClick}
+      />
+    );
   };
 
   const Prev = (props) => {
-    const { onClick } = props;
-    return <S.PrevArrow src={prevArrow} onClick={onClick} />;
+    const { style, className, onClick } = props;
+    return (
+      <S.PrevArrow
+        className={className}
+        style={{ ...style }}
+        src={prevArrow}
+        onClick={onClick}
+      />
+    );
   };
 
   const settings = {
-    nextArrow: <Next />,
-    prevArrow: <Prev />,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    initialSlide: 1,
-    responsive: [
-      {
-        breakpoint: 375,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          initialSlide: 1,
-          infinite: true,
-        },
-      },
-    ],
+    nextArrow: <Next />,
+    prevArrow: <Prev />,
   };
 
   return (
@@ -76,24 +79,27 @@ const Highlighted = () => {
         <S.Title>Produtos em destaque</S.Title>
       </S.TitleContainer>
       <S.SliderContainer>
-        <div>
+        <Slider {...settings}>
+          <S.CardContainer>
+            <S.Card>
+              <S.CardHeader>
+                <img src={product} alt="" />
+              </S.CardHeader>
+              <S.CardFooter>
+                <S.CardTitle>Title</S.CardTitle>
+                <S.CardPrice>R$ 200,00</S.CardPrice>
+                <S.CardButton>Comprar</S.CardButton>
+              </S.CardFooter>
+            </S.Card>
+          </S.CardContainer>
+
           <S.Card>
-            <Slider
-              style={{
-                display: "flex",
-                "align-items": "center",
-                width: "80vw",
-                gap: "10px",
-              }}
-              {...settings}
-            >
-              {products &&
-                products.map((data) => {
-                  return <S.CardImage src={data.thumbnail} alt="image" />;
-                })}
-            </Slider>
+            <S.CardHeader>
+              <h3>Image 02</h3>
+            </S.CardHeader>
+            <S.CardFooter>Footer</S.CardFooter>
           </S.Card>
-        </div>
+        </Slider>
       </S.SliderContainer>
     </S.Container>
   );
