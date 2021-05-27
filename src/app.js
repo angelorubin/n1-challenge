@@ -1,11 +1,11 @@
 import Home from "pages/home";
-import * as S from "app.styles";
+import * as S from "styles";
 
 function App() {
   return (
-    <S.HomeContainer>
+    <S.AppContainer>
       <Home />
-    </S.HomeContainer>
+    </S.AppContainer>
   );
 }
 
