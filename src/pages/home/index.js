@@ -1,7 +1,6 @@
 /**
  * Components
  */
-import { HomeContainer } from "../../app.styles";
 import * as S from "./styles";
 import SliderControl from "pages/home/slider-control";
 import Highlighted from "pages/home/highlighted";
@@ -25,7 +24,7 @@ import zelda from "images/zelda-banner.png";
 
 function Home() {
   return (
-    <HomeContainer>
+    <S.HomeContainer>
       <S.MenuContainer>
         <S.Menu>
           <S.MenuItem>
@@ -99,7 +98,7 @@ function Home() {
           </S.FooterTextContainer>
         </S.FooterContainer>
       </S.Footer>
-    </HomeContainer>
+    </S.HomeContainer>
   );
 }
 export default Home;
