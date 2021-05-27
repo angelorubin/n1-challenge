@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import bg from "images/banner-mobile.png";
 
-export const Container = styled.div`
+export const HomeContainer = styled.div`
   display: flex;
-  width: ${(props) => props.width || ""};
+  flex-direction: column;
 `;
 
 /**
@@ -42,6 +42,31 @@ export const MenuItem = styled.div``;
 
 export const Icon = styled.img`
   color: white;
+`;
+
+/**
+ * Menu Footer
+ */
+
+export const MenuFooterContainer = styled.div`
+  display: flex;
+`;
+
+export const FooterTitleContainer = styled.div`
+  display: flex;
+  flex: 1 100px;
+  justify-content: flex-start;
+  align-items: center;
+  background: #3ec6e0;
+  height: 52px;
+  border-radius: 0px 0px 0px 10px;
+`;
+
+export const FooterTitle = styled.h1`
+  margin-left: 22px;
+  font-weight: normal;
+  font-size: 14px;
+  color: #ffffff;
 `;
 
 /**
@@ -98,31 +123,6 @@ export const OverlayDescription = styled.p`
 `;
 
 /**
- * Menu Footer
- */
-
-export const MenuFooterContainer = styled.div`
-  display: flex;
-`;
-
-export const FooterTitleContainer = styled.div`
-  display: flex;
-  flex: 1 100px;
-  justify-content: flex-start;
-  align-items: center;
-  background: #3ec6e0;
-  height: 52px;
-  border-radius: 0px 0px 0px 10px;
-`;
-
-export const FooterTitle = styled.h1`
-  margin-left: 22px;
-  font-weight: normal;
-  font-size: 14px;
-  color: #ffffff;
-`;
-
-/**
  * Content
  */
 
@@ -171,7 +171,7 @@ export const CardFooterLine = styled.img`
 `;
 
 /**
- * Footer
+ * Home Footer
  */
 
 export const Footer = styled.div`
