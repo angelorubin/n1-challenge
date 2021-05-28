@@ -1,9 +1,10 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 
 export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
+  justify-content: center;
 `;
 
 export const TitleContainer = styled.div`
@@ -119,15 +120,21 @@ export const OrderSuccessfullyPlacedContainer = styled.div`
 `;
 
 export const OrderSuccessfullyPlaced = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background: #ffffff;
   border-radius: 5px;
   margin: 15px;
   width: 344;
   height: 500;
+  padding: 1rem;
 `;
 
 export const OrderIcon = styled.img`
   height: 20px;
+  align-self: flex-end;
 `;
 
 export const OrderText = styled.h1`
@@ -137,6 +144,7 @@ export const OrderText = styled.h1`
   line-height: 35px;
   text-align: center;
   color: #084154;
+  width: 60%;
 `;
 
 export const OrderImage = styled.img``;

@@ -25,6 +25,7 @@ export const Menu = styled.div`
   display: flex;
   justify-content: center;
   width: 90%;
+  padding-bottom: 160px;
 `;
 
 export const MenuItemContainer = styled.div`
@@ -58,7 +59,7 @@ export const MenuItemText = styled.p`
   font-size: 18px;
   line-height: 16px;
   color: #ffffff;
-  @media (max-width: 600px) {
+  @media (max-width: 500px) {
     display: none;
   }
 `;
@@ -90,13 +91,67 @@ export const Logo = styled.img`
 `;
 
 /**
+ * GameText Container
+ */
+
+export const GameContentContainer = styled.div`
+  display: flex;
+  margin-top: 138px;
+  @media (max-width: 600px) {
+    display: none;
+  }
+  & > div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  & > div > h1 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 46px;
+    color: #ffffff;
+    padding-right: 30px;
+    width: 100%;
+    text-align: right;
+  }
+  & > div > div > h2 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 70px;
+    color: #3ec6e0;
+  }
+  & > div:nth-child(1) > div {
+    display: flex;
+    padding-right: 20px;
+    align-items: center;
+
+    height: 100px;
+  }
+  & > div > div > h3 {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    color: #3ec6e0;
+  }
+  & > div > p {
+    font-style: normal;
+    font-weight: normal;
+    margin-right: 20px;
+    text-align: right;
+    width: 60%;
+    font-size: 16px;
+    line-height: 155%;
+    color: #ffffff;
+  }
+`;
+
+/**
  * Menu Footer
  */
 
 export const MenuFooterContainer = styled.div`
   display: flex;
   @media (min-width: 500px) {
-    border: 2px dashed red;
     display: none;
   }
 `;
@@ -183,11 +238,16 @@ export const ContentContainer = styled.div`
   display: flex;
   margin: 25px 0 25px 0;
   justify-content: center;
+  margin-top: -10%;
+  @media (max-width: 600px) {
+    display: none;
+  }
 `;
 
 export const Content = styled.div`
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 10px;
   width: 90%;
 `;
@@ -195,12 +255,13 @@ export const Content = styled.div`
 export const Card = styled.div`
   display: flex;
   flex-direction: column;
+  width: 45%;
 `;
 
 export const CardFooter = styled.div`
   display: flex;
   align-items: center;
-  height: 30px;
+  min-height: 30px;
   background-color: #3ec6e0;
   border-left: 5px solid #084154;
   border-bottom-left-radius: 5px;
@@ -219,8 +280,11 @@ export const CardFooterText = styled.h1`
   color: #084154;
 `;
 
-export const CardFooterLine = styled.img`
-  height: 1px;
+export const CardFooterLine = styled.hr`
+  border: 1px solid #084154;
+  width: 50%;
+  max-width: 50%;
+  margin-right: 10px;
 `;
 
 /**
@@ -266,33 +330,28 @@ export const FooterText = styled.h1`
 `;
 
 /**
- * Desktop Menu
+ * Desktop Slider Menu
  */
 
-export const DesktopMenuContainer = styled.div`
-  @media (max-width: 600px) {
-    display: none;
-  }
+export const DesktopSliderContainer = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  position: absolute;
-  right: 0;
-  top: 212px;
-  height: 384px;
+  @media (max-width: 500px) {
+    display: none;
+  }
 `;
 
-export const DesktopMenuTitleContainer = styled.div`
+export const DesktopSliderTitleContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  flex: 3;
+  flex: 4;
   width: 63px;
   writing-mode: vertical-rl;
   background-color: #3ec6e0;
 `;
 
-export const DesktopMenuTitle = styled.h1`
+export const DesktopSliderTitle = styled.h1`
   display: flex;
   flex: 1;
   align-items: center;
@@ -304,32 +363,62 @@ export const DesktopMenuTitle = styled.h1`
   color: #ffffff;
 `;
 
-export const DesktopMenuNavigationContainer = styled.div`
+export const DesktopSliderNavigationContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: center;
   flex: 1;
   border-radius: 0 0 0 10px;
-  width: 63px;
   background: #084154;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  & > div > div:nth-child(1) {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    letter-spacing: 1;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #ffffff;
+  }
+  & > div > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    gap: 10px;
+    width: 63px;
+  }
 `;
 
-export const DesktopMenuNavigationIconContainer = styled.div`
+export const DesktopSliderNavigationIconContainer = styled.div`
   display: flex;
   gap: 10px;
 `;
 
-export const DesktopMenuNavigationPrevIcon = styled.img`
+export const DesktopSliderNavigationPrevIcon = styled.img`
   width: 10px;
   height: 18px;
 `;
 
-export const DesktopMenuNavigationNextIcon = styled.img`
+export const DesktopSliderNavigationNextIcon = styled.img`
   width: 10px;
   height: 18px;
 `;
 
-export const DesktopMenuNavigationPages = styled.h1`
+export const DesktopSliderNavigationPagesContainer = styled.div`
+  display: flex;
+`;
+
+export const DesktopSliderNavigationPages = styled.h1`
   font-style: normal;
   font-weight: normal;
   font-size: 14px;

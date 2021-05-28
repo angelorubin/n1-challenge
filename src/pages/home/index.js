@@ -28,21 +28,6 @@ function Home() {
   return (
     <S.HomeContainer>
       <S.MenuContainer>
-        <S.DesktopMenuContainer>
-          <S.DesktopMenuTitleContainer>
-            <S.DesktopMenuTitle>MORTAL KOMBAT</S.DesktopMenuTitle>
-            <S.SeparatorContainer>
-              <S.Separator />
-            </S.SeparatorContainer>
-          </S.DesktopMenuTitleContainer>
-          <S.DesktopMenuNavigationContainer>
-            <S.DesktopMenuNavigationPages>1/2</S.DesktopMenuNavigationPages>
-            <S.DesktopMenuNavigationIconContainer>
-              <S.DesktopMenuNavigationNextIcon src={nextIcon} />
-              <S.DesktopMenuNavigationPrevIcon src={prevIcon} />
-            </S.DesktopMenuNavigationIconContainer>
-          </S.DesktopMenuNavigationContainer>
-        </S.DesktopMenuContainer>
         <S.Menu>
           <S.MenuItemContainer>
             <S.MenuItem>
@@ -67,6 +52,40 @@ function Home() {
             </S.MenuItem>
           </S.MenuItemContainer>
         </S.Menu>
+
+        <S.GameContentContainer>
+          <div>
+            <h1>MORTAL KOMBAT</h1>
+            <div>
+              <h2>R$ 299</h2>
+              <h3>,99</h3>
+            </div>
+            <p>
+              Mortal Kombat X combina uma apresentação cinemática única com uma
+              jogabilidade totalmente nova. Os jogadores podem escolher pela
+              primeira vez diversas variantes de cada personagem, afetando tanto
+              a estratégia como o estilo de luta.
+            </p>
+          </div>
+          <S.DesktopSliderContainer>
+            <S.DesktopSliderTitleContainer>
+              <S.DesktopSliderTitle>MORTAL KOMBAT</S.DesktopSliderTitle>
+              <S.SeparatorContainer>
+                <S.Separator />
+              </S.SeparatorContainer>
+            </S.DesktopSliderTitleContainer>
+            <S.DesktopSliderNavigationContainer>
+              <div>
+                <div>1 / 2</div>
+                <div>
+                  <S.DesktopSliderNavigationNextIcon src={nextIcon} />
+                  <S.DesktopSliderNavigationPrevIcon src={prevIcon} />
+                </div>
+              </div>
+            </S.DesktopSliderNavigationContainer>
+          </S.DesktopSliderContainer>
+        </S.GameContentContainer>
+
         <S.Overlay>
           <S.OverlayContainer>
             <S.OverlayTitle>MORTAL KOMBAT</S.OverlayTitle>

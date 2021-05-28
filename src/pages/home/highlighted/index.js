@@ -103,6 +103,14 @@ const Highlighted = () => {
           initialSlide: 2,
         },
       },
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          initialSlide: 1,
+        },
+      },
     ],
   };
 
@@ -161,11 +169,5 @@ const Highlighted = () => {
     </S.Container>
   );
 };
-
-/**
- *  {images.map((image) => {
-      return <S.CardImage src={image} alt="image" />;
-    })}
- */
 
 export default Highlighted;
