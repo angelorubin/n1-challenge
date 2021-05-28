@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import bg from "images/banner-mobile.png";
 
 export const HomeContainer = styled.div`
@@ -16,32 +16,77 @@ export const MenuContainer = styled.div`
   background-image: url(${bg});
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  @media (min-width: 500px) {
+    height: 840px;
+  }
 `;
 
 export const Menu = styled.div`
   display: flex;
-  padding-top: 10px;
-  align-items: flex-start;
+  justify-content: center;
   width: 90%;
-  min-height: 222px;
-  margin-top: 20px;
+`;
+
+export const MenuItemContainer = styled.div`
+  display: flex;
+  width: 90%;
+  margin-top: 40px;
+  & > div:nth-child(1) > img {
+    width: 30px;
+    height: 20px;
+  }
   @media (min-width: 100px) {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
-  @media (min-width: 400px) {
+`;
+
+export const MenuItem = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+`;
+
+export const MenuItemIcon = styled.img`
+  color: white;
+  height: 25px;
+`;
+
+export const MenuItemText = styled.p`
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 16px;
+  color: #ffffff;
+  @media (max-width: 600px) {
+    display: none;
   }
+`;
+
+export const MenuItemBagContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  height: 25px;
+  width: 25px;
+  background-color: #3ec6e0;
+  border-radius: 50%;
+  @media (max-width: 600px) {
+    display: none;
+  }
+`;
+
+export const MenuItemBag = styled.span`
+  font-style: normal;
+  font-weight: 900;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
 `;
 
 export const Logo = styled.img`
-  height: 20px;
-`;
-
-export const MenuItem = styled.div``;
-
-export const Icon = styled.img`
-  color: white;
+  height: 25px;
 `;
 
 /**
@@ -50,6 +95,10 @@ export const Icon = styled.img`
 
 export const MenuFooterContainer = styled.div`
   display: flex;
+  @media (min-width: 500px) {
+    border: 2px dashed red;
+    display: none;
+  }
 `;
 
 export const FooterTitleContainer = styled.div`
@@ -78,6 +127,10 @@ export const Overlay = styled.div`
   justify-content: center;
   background: rgba(0, 0, 0, 0.65);
   min-height: 214px;
+  @media (min-width: 500px) {
+    border: 2px dashed red;
+    display: none;
+  }
 `;
 
 export const OverlayContainer = styled.div`
@@ -210,4 +263,89 @@ export const FooterText = styled.h1`
   font-size: 12px;
   line-height: 14px;
   color: #ffffff;
+`;
+
+/**
+ * Desktop Menu
+ */
+
+export const DesktopMenuContainer = styled.div`
+  @media (max-width: 600px) {
+    display: none;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  top: 212px;
+  height: 384px;
+`;
+
+export const DesktopMenuTitleContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 3;
+  width: 63px;
+  writing-mode: vertical-rl;
+  background-color: #3ec6e0;
+`;
+
+export const DesktopMenuTitle = styled.h1`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+`;
+
+export const DesktopMenuNavigationContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  border-radius: 0 0 0 10px;
+  width: 63px;
+  background: #084154;
+`;
+
+export const DesktopMenuNavigationIconContainer = styled.div`
+  display: flex;
+  gap: 10px;
+`;
+
+export const DesktopMenuNavigationPrevIcon = styled.img`
+  width: 10px;
+  height: 18px;
+`;
+
+export const DesktopMenuNavigationNextIcon = styled.img`
+  width: 10px;
+  height: 18px;
+`;
+
+export const DesktopMenuNavigationPages = styled.h1`
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+`;
+
+export const SeparatorContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+`;
+
+export const Separator = styled.div`
+  width: 1px;
+  height: 80%;
+  border-left: 2px solid #ffffff;
 `;

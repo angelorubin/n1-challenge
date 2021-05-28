@@ -12,6 +12,8 @@ import hamburguer from "images/icons/hamburguer.png";
 import plane from "images/icons/paper-plane.png";
 import search from "images/icons/search-solid.png";
 import bag from "images/icons/shopping-bag-solid.png";
+import nextIcon from "images/icons/angle-left-solid.png";
+import prevIcon from "images/icons/angle-right-solid.png";
 
 /**
  * Images
@@ -26,22 +28,44 @@ function Home() {
   return (
     <S.HomeContainer>
       <S.MenuContainer>
+        <S.DesktopMenuContainer>
+          <S.DesktopMenuTitleContainer>
+            <S.DesktopMenuTitle>MORTAL KOMBAT</S.DesktopMenuTitle>
+            <S.SeparatorContainer>
+              <S.Separator />
+            </S.SeparatorContainer>
+          </S.DesktopMenuTitleContainer>
+          <S.DesktopMenuNavigationContainer>
+            <S.DesktopMenuNavigationPages>1/2</S.DesktopMenuNavigationPages>
+            <S.DesktopMenuNavigationIconContainer>
+              <S.DesktopMenuNavigationNextIcon src={nextIcon} />
+              <S.DesktopMenuNavigationPrevIcon src={prevIcon} />
+            </S.DesktopMenuNavigationIconContainer>
+          </S.DesktopMenuNavigationContainer>
+        </S.DesktopMenuContainer>
         <S.Menu>
-          <S.MenuItem>
-            <S.Icon img src={hamburguer} alt="icon-hamburguer" />
-          </S.MenuItem>
-          <S.MenuItem>
-            <S.Logo src={logo} alt="logo" />
-          </S.MenuItem>
-          <S.MenuItem>
-            <S.Icon img src={plane} alt="paper-plane" />
-          </S.MenuItem>
-          <S.MenuItem>
-            <S.Icon img src={search} alt="search" />
-          </S.MenuItem>
-          <S.MenuItem>
-            <S.Icon img src={bag} alt="shopping-bag" />
-          </S.MenuItem>
+          <S.MenuItemContainer>
+            <S.MenuItem>
+              <S.MenuItemIcon src={hamburguer} alt="icon-hamburguer" />
+            </S.MenuItem>
+            <S.MenuItem>
+              <S.Logo src={logo} alt="logo" />
+            </S.MenuItem>
+            <S.MenuItem>
+              <S.MenuItemIcon src={plane} alt="paper-plane" />
+              <S.MenuItemText>contanto</S.MenuItemText>
+            </S.MenuItem>
+            <S.MenuItem>
+              <S.MenuItemIcon src={search} alt="search" />
+              <S.MenuItemText>buscar</S.MenuItemText>
+            </S.MenuItem>
+            <S.MenuItem>
+              <S.MenuItemIcon src={bag} alt="shopping-bag" />
+              <S.MenuItemBagContainer>
+                <S.MenuItemBag>2</S.MenuItemBag>
+              </S.MenuItemBagContainer>
+            </S.MenuItem>
+          </S.MenuItemContainer>
         </S.Menu>
         <S.Overlay>
           <S.OverlayContainer>
